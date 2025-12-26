@@ -204,43 +204,43 @@ if (nextBtn) {
 }
 
 // Handle window resize
-let resizeTimer;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-        updateCarousel();
-    }, 250);
-});
+// let resizeTimer;
+// window.addEventListener('resize', () => {
+//     clearTimeout(resizeTimer);
+//     resizeTimer = setTimeout(() => {
+//         updateCarousel();
+//     }, 250);
+// });
 
 // Initialize carousel
-updateCarousel();
+// updateCarousel();
 
-// ===== Auto-play carousel (optional)
-let autoPlayInterval;
-function startAutoPlay() {
-    autoPlayInterval = setInterval(() => {
-        const maxIndex = Math.max(0, screenshotItems.length - itemsToShow);
-        if (currentIndex < maxIndex) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
-        }
-        updateCarousel();
-    }, 5000);
-}
+// // ===== Auto-play carousel (optional)
+// let autoPlayInterval;
+// function startAutoPlay() {
+//     autoPlayInterval = setInterval(() => {
+//         const maxIndex = Math.max(0, screenshotItems.length - itemsToShow);
+//         if (currentIndex < maxIndex) {
+//             currentIndex++;
+//         } else {
+//             currentIndex = 0;
+//         }
+//         updateCarousel();
+//     }, 5000);
+// }
 
-// Pause on hover
-if (carouselTrack) {
-    carouselTrack.addEventListener('mouseenter', () => {
-        if (autoPlayInterval) {
-            clearInterval(autoPlayInterval);
-        }
-    });
+// // Pause on hover
+// if (carouselTrack) {
+//     carouselTrack.addEventListener('mouseenter', () => {
+//         if (autoPlayInterval) {
+//             clearInterval(autoPlayInterval);
+//         }
+//     });
     
-    carouselTrack.addEventListener('mouseleave', () => {
-        startAutoPlay();
-    });
-}
+//     carouselTrack.addEventListener('mouseleave', () => {
+//         startAutoPlay();
+//     });
+// }
 
 // Touch/swipe support for carousel
 let touchStartX = 0;
@@ -530,11 +530,6 @@ window.addEventListener('scroll', debouncedScroll);
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all features
     updateCarousel();
-    
-    // Start autoplay after a delay
-    setTimeout(() => {
-        startAutoPlay();
-    }, 2000);
     
     // Add loaded class to body for fade-in animation
     document.body.classList.add('loaded');

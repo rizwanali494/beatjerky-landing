@@ -149,6 +149,12 @@ body::after {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    background: transparent;
+}
+
+.screenshots .container {
+    background: none !important;
+    box-shadow: none !important;
 }
 
 .hero .container {
@@ -832,6 +838,8 @@ body::after {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Hide scrollbar for Firefox */
     -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    background: none !important;
+    box-shadow: none !important;
 }
 
 .screenshot-carousel::-webkit-scrollbar {
@@ -842,6 +850,8 @@ body::after {
     display: flex;
     gap: 0.5rem;
     width: max-content;
+    background: none !important;
+    box-shadow: none !important;
 }
 
 .screenshot-item {
@@ -852,6 +862,8 @@ body::after {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: none !important;
+    box-shadow: none !important;
 }
 
 /* ===== Android Phone Mockup Styles (Inspired by react-device-mockup) ===== */
