@@ -161,7 +161,7 @@ const screenshotItems = document.querySelectorAll('.screenshot-item');
 
 let currentIndex = 0;
 const itemsToShow = 3;
-const gap = 32; // 2rem in pixels
+const gap = 8; // 0.5rem in pixels
 
 function updateCarousel() {
     if (!carouselTrack) return;
